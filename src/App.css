@@ -1,42 +1,106 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header {
+  background-color: rgba(34, 61, 13, 0.9);
+  color: white;
+  padding: 20px;
   text-align: center;
+  width: 100%;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.banner {
+  background-color: rgb(22 51 0);
+  color: white;
+  padding: 40px;
+  text-align: center;
+  width: 100%;
+  min-height: 50vh;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.banner h2 {
+  color: #9fe870;
+  text-transform: uppercase;
+  font-size: 60px;
+}
+.form {
+  background-color: #edefeb;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.form-container {
+  min-width: 880px;
+  background-color: white;
+  border-radius: 20px;
+  min-height: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  top: -70px;
+}
+
+.main-content {
+  padding: 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+  flex: 1;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .header h1,
+  .banner h2 {
+    font-size: 1.5rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .banner p {
+    font-size: 1rem;
+  }
+
+  .main-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .footer p {
+    font-size: 0.9rem;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@media (max-width: 480px) {
+  .header h1,
+  .banner h2,
+  .main-content h3 {
+    font-size: 1rem;
   }
-}
 
-.card {
-  padding: 2em;
-}
+  .banner {
+    padding: 20px;
+  }
 
-.read-the-docs {
-  color: #888;
+  .footer {
+    padding: 5px;
+  }
 }
