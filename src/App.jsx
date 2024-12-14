@@ -1,27 +1,18 @@
-import "./App.css";
+import "./styles/main.scss";
 
-const App = () => {
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+
+function App() {
   return (
     <div className="container">
-      <div className="header">
-        <h1>Header</h1>
-      </div>
-      <div className="banner">
-        <h2>Currency Converter</h2>
-        <p>This is the banner content.</p>
-      </div>
-
-      <div className="form">
-        <div className="form-container">
-          <h2>Form Here</h2>
-          <p>This is the form content.</p>
-        </div>
-      </div>
-      <div className="footer">
-        <p>Footer Content</p>
-      </div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+        </Routes>
+      </Router>
     </div>
   );
-};
+}
 
 export default App;
