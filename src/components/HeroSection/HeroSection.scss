@@ -1,0 +1,27 @@
+.hero {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+  background-color: $primary-color;
+  padding-bottom: 130px;
+  gap: 20px;
+
+  &-title {
+    color: $light-green;
+    font-size: 58px;
+  }
+
+  &-paragraph {
+    color: $light-white;
+    max-width: 900px;
+  }
+
+  button {
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+  }
+}

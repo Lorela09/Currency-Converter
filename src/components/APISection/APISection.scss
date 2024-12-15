@@ -1,0 +1,33 @@
+.api-info {
+  background-color: #173300;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+
+  .content {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    gap: 4rem;
+    padding: 4rem 0;
+    max-width: 1240px;
+    text-align: left;
+
+    .api-content {
+      max-width: 50%;
+      button {
+        margin-top: 1rem;
+      }
+    }
+
+    .api-image {
+      max-width: 50%;
+      img {
+        max-width: 500px;
+      }
+    }
+  }
+}

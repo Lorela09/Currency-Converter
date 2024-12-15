@@ -1,4 +1,4 @@
-import footerLogo from "../assets/images/wise-logo-footer.png";
+import footerLogo from "../../assets/images/wise-logo-footer.png";
 
 const Footer = () => {
   return (

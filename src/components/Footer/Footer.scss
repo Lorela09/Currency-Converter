@@ -1,0 +1,33 @@
+footer {
+  background-color: $light-background;
+  text-align: center;
+
+  .footer-content {
+    display: flex;
+    background-size: cover !important;
+    padding: 1rem;
+    text-align: center;
+    background: url(../src/assets/images/cta-background.webp);
+    height: 260px;
+    background-repeat: no-repeat;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .footer-links {
+    padding: 20px 0 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .footer-links a {
+    margin-right: 1rem;
+    text-decoration-color: $primary-color !important;
+    text-decoration-thickness: 2px !important;
+    text-decoration: underline;
+  }
+}

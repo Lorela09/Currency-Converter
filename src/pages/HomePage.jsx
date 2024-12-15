@@ -1,9 +1,9 @@
-import Header from "../components/Header";
-import HeroSection from "../components/HeroSection";
-import ConverterSection from "../components/ConverterSection";
-import HowToSection from "../components/HowToSection";
-import APISection from "../components/APISection";
-import Footer from "../components/Footer";
+import Header from "../components/Header/Header";
+import HeroSection from "../components/HeroSection/HeroSection";
+import ConverterSection from "../components/ConverterSection/ConverterSection";
+import HowToSection from "../components/HowToSection/HowToSection";
+import APISection from "../components/APISection/APISection";
+import Footer from "../components/Footer/Footer";
 
 const HomePage = () => {
   return (

@@ -1,0 +1,25 @@
+.how-to {
+  padding: 4rem 0;
+  text-align: center;
+  background-color: $light-background;
+
+  .steps {
+    padding-top: 4rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: flex-start;
+    gap: 3rem;
+
+    div {
+      padding: 2rem;
+      border-radius: 32px;
+      background-color: $secondary-color;
+      min-width: 300px;
+      max-width: 300px;
+      min-height: 178px;
+    }
+  }
+}

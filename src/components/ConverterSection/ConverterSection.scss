@@ -1,0 +1,110 @@
+.converter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: $light-background;
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    margin-top: -120px;
+    background-color: $secondary-color;
+    border-radius: 32px;
+    box-shadow: 0 0 30px 0 #00000012;
+    z-index: 3;
+    width: 710px;
+
+    .converter-input {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      gap: 10px;
+      width: 100%;
+
+      > div {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        border: 1px solid grey;
+        padding: 5px;
+        border-radius: 8px;
+
+        input {
+          width: 150px;
+          height: 45px;
+          padding: 10px;
+          font-size: 22px !important;
+          border: 0px;
+          font-weight: 600;
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        select {
+          height: 45px;
+          border: 0px;
+          border-radius: 8px;
+          padding: 0 10px;
+          font-size: 16px;
+          cursor: pointer;
+
+          &:hover {
+            border-color: #007bff;
+          }
+
+          &:focus {
+            outline: none;
+            border-color: #007bff;
+          }
+        }
+      }
+
+      span {
+        font-size: 24px;
+        color: #007bff;
+        margin: 0 5px;
+      }
+      &-result {
+        display: flex;
+        gap: 50px;
+        margin-top: 20px;
+        align-items: center;
+
+        button {
+          max-height: 50px;
+        }
+      }
+    }
+
+    p {
+      margin-top: 25px;
+      font-size: 20px;
+      font-weight: 500;
+      color: #0d0d0d;
+      font-weight: 600;
+
+      span {
+        color: #28a745;
+        font-weight: bold;
+      }
+    }
+  }
+
+  &-border {
+    background: url(../src/assets/images/border-image.jpg);
+    background-size: cover;
+    height: 50px;
+    min-width: 778px;
+    border-bottom-left-radius: 32px;
+    border-bottom-right-radius: 32px;
+    position: relative;
+    top: -40px;
+    z-index: 1;
+  }
+}
