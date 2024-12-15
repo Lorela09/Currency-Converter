@@ -3,17 +3,29 @@ const ConverterSection = () => {
     <section className="converter">
       <div className="converter-container">
         <div className="converter-input">
-          <input type="number" placeholder="Amount" />
-          <select>
-            <option>GBP</option>
-          </select>
+          <div className="converter-input-left">
+            <input value="1,000" />
+            <select>
+              <option value="GBP">GBP</option>
+              <option value="EUR">EUR</option>
+              <option value="USD">USD</option>
+              <option value="JPY">JPY</option>
+            </select>
+          </div>
           <span>⇄</span>
-          <input type="number" placeholder="Converted amount" disabled />
-          <select>
-            <option>EUR</option>
-          </select>
+          <div className="converter-input-right">
+            <input value="1,213" />
+            <select>
+              <option value="EUR">EUR</option>
+              <option value="USD">USD</option>
+              <option value="JPY">JPY</option>
+            </select>
+          </div>
         </div>
-        <p>£1,000 GBP = €1,213 EUR</p>
+        <div className="converter-input-result">
+          <p>£1,000 GBP = €1,213 EUR</p>
+          <button>Convert</button>
+        </div>
       </div>
       <div className="converter-border"> </div>
     </section>

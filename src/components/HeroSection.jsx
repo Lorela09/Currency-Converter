@@ -11,7 +11,7 @@ const HeroSection = () => {
         you’ll usually find on Google).
       </p>
       <div className="hero-actions">
-        <button>Get started</button>
+        <button className="outline">Get started</button>
         <button>Contact sales</button>
       </div>
     </section>
