@@ -24,4 +24,18 @@
     margin: 0.5rem;
     padding: 0.5rem 1rem;
   }
+
+  button.outlined-button {
+    background-color: transparent !important;
+    color: $light-green;
+    border: 2px solid $light-green;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+
+  button.outlined-button:hover {
+    background-color: $light-green !important;
+    color: $primary-color;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
 }
