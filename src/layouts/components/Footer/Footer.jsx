@@ -9,9 +9,9 @@ const Footer = () => {
       </div>
       <div className="footer-links">
         <img src={footerLogo} height="30" />
-        <a href="#">Privacy Policy</a>
-        <a href="#">Cookie Policy</a>
-        <a href="#">Complaints</a>
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/cookies-policy">Cookie Policy</a>
+        <a href="/contact">Complaints</a>
       </div>
     </footer>
   );

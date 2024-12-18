@@ -1,9 +1,9 @@
-import image from "../../../assets/images/api-image.png";
+import image from "../../../../assets/images/api-image.png";
 
 const APISection = () => {
   return (
     <section className="api-info">
-      <div className="content">
+      <div className="api-section-content">
         <div className="api-content">
           <h2>Automate payouts with our API.</h2>
           <p>

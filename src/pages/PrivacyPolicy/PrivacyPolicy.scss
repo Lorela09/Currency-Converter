@@ -1,0 +1,16 @@
+.main-container {
+  padding: 4rem 0;
+  .privacy-content {
+    display: grid;
+    max-width: 1200px;
+    margin: auto;
+    padding: 3rem;
+    background-color: $secondary-color;
+    border: 1px solid $light-green;
+    border-radius: 20px;
+
+    h2 {
+      font-size: 30px;
+    }
+  }
+}
