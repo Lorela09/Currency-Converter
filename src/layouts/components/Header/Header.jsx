@@ -1,4 +1,4 @@
-import logo from "../../assets/images/wise-logo.png";
+import logo from "../../../assets/images/wise-logo.png";
 
 const Header = () => {
   return (

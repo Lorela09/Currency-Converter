@@ -1,4 +1,4 @@
-import image from "../../assets/images/api-image.png";
+import image from "../../../assets/images/api-image.png";
 
 const APISection = () => {
   return (
