@@ -1,6 +1,15 @@
+import React from "react";
+import { useNavigate } from "react-router-dom";
 import image from "../../../../assets/images/api-image.png";
+import Button from "../../../../components/Button/Button";
 
 const APISection = () => {
+  const navigate = useNavigate();
+
+  const handleContactClick = () => {
+    navigate("/contact");
+  };
+
   return (
     <section className="api-info">
       <div className="api-section-content">
@@ -12,7 +21,14 @@ const APISection = () => {
             Wise API gives businesses access to the low fees, speedy transfers,
             and smart tech that powers Wise Business transfers.
           </p>
-          <button>Contact sales</button>
+
+          <Button
+            navigateTo="/contact"
+            variant="primary"
+            onClick={handleContactClick}
+          >
+            Contact sales
+          </Button>
         </div>
         <div className="api-image">
           <img src={image} />

@@ -1,3 +1,5 @@
+import Button from "../../../../components/Button/Button";
+
 const ConverterSection = () => {
   return (
     <section className="converter">
@@ -24,7 +26,7 @@ const ConverterSection = () => {
         </div>
         <div className="converter-input-result">
           <p>£1,000 GBP = €1,213 EUR</p>
-          <button>Convert</button>
+          <Button variant="primary">Convert</Button>
         </div>
       </div>
       <div className="converter-border"> </div>

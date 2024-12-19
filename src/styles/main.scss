@@ -2,6 +2,7 @@
 @import "./variables";
 @import "../layouts/Layouts.scss";
 @import "../pages/pages.scss";
+@import "../components/Button/Button.scss";
 
 html,
 body {
@@ -29,31 +30,4 @@ h2 {
 a {
   text-decoration: none;
   color: inherit;
-}
-
-button {
-  font-size: 1.1rem;
-  font-weight: bold;
-  padding: 1rem 2rem !important;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border: none;
-  background-color: $light-green;
-  color: $primary-color;
-
-  &:hover {
-    background-color: $secondary-color;
-    color: $primary-color;
-  }
-}
-
-button.outline {
-  border: 1px solid $primary-color;
-  background-color: $secondary-color;
-  color: $primary-color;
-
-  &:hover {
-    background-color: $light-green;
-  }
 }

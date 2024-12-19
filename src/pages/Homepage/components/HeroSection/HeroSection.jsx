@@ -1,4 +1,17 @@
+import { useNavigate } from "react-router-dom";
+import Button from "../../../../components/Button/Button";
+
 const HeroSection = () => {
+  const navigate = useNavigate();
+
+  const handleContactClick = () => {
+    navigate("/contact");
+  };
+
+  const handleGetStartedClick = () => {
+    navigate("/contact");
+  };
+
   return (
     <section className="hero">
       <h1 className="hero-title">CURRENCY CONVERTER</h1>
@@ -11,8 +24,20 @@ const HeroSection = () => {
         you’ll usually find on Google).
       </p>
       <div className="hero-actions">
-        <button>Get started</button>
-        <button className="outlined-button">Contact sales</button>
+        <Button
+          navigateTo="/contact"
+          variant="primary"
+          onClick={handleGetStartedClick}
+        >
+          Get started
+        </Button>
+        <Button
+          navigateTo="/contact"
+          variant="outlined"
+          onClick={handleContactClick}
+        >
+          Contact sales
+        </Button>
       </div>
     </section>
   );
