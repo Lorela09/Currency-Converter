@@ -1,0 +1,9 @@
+.app-layout {
+  @import "../AppLayout/components/Header/Header.scss";
+
+  .content {
+    background-color: $light-background;
+  }
+
+  @import "../AppLayout/components/Footer/Footer.scss";
+}

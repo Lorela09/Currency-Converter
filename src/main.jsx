@@ -2,7 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./styles/main.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "../src/layouts/Layout";
+import Layout from "../src/layouts/AppLayout/Layout";
 import HomePage from "./pages/Homepage/HomePage";
 import Contact from "./pages/Contact/Contact";
 import PrivacyPolicy from "./pages/PrivacyPolicy/PrivacyPolicy";

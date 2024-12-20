@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import image from "../../../../assets/images/api-image.png";
-import Button from "../../../../components/Button/Button";
+import Button from "../../../../components/common/Button/Button";
 
 const APISection = () => {
   const navigate = useNavigate();

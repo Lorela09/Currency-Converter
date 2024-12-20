@@ -1,8 +1,8 @@
 @import "./fonts";
 @import "./variables";
-@import "../layouts/Layouts.scss";
-@import "../pages/pages.scss";
-@import "../components/Button/Button.scss";
+@import "../layouts/AppLayout/Layout.scss";
+@import "./pages.scss";
+@import "./components.scss";
 
 html,
 body {
