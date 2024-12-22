@@ -34,8 +34,8 @@
         border-radius: 8px;
 
         input {
-          width: 150px;
-          height: 45px;
+          width: 160px;
+          height: 40px;
           padding: 10px;
           font-size: 22px !important;
           border: 0;
@@ -44,6 +44,9 @@
           &:focus {
             outline: none;
           }
+        }
+        .css-1wruglf-control {
+          border: none;
         }
 
         select {
