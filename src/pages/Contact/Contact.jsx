@@ -7,12 +7,12 @@ const Contact = () => {
     message: "",
   });
 
-  const handleChange = (e) => {
+  const updateContactFormFields = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const submitContactRequest = (e) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
     alert("Thank you for contacting us!");
@@ -24,12 +24,12 @@ const Contact = () => {
       <div className="contact-form-container">
         <h1>Contact Us</h1>
         <p>Have questions? We're here to help!</p>
-        <form onSubmit={handleSubmit} className="contact-form">
+        <form onSubmit={submitContactRequest} className="contact-form">
           <input
             type="text"
             name="name"
             value={formData.name}
-            onChange={handleChange}
+            onChange={updateContactFormFields}
             placeholder="Your Name"
             required
           />
@@ -37,14 +37,14 @@ const Contact = () => {
             type="email"
             name="email"
             value={formData.email}
-            onChange={handleChange}
+            onChange={updateContactFormFields}
             placeholder="Your Email"
             required
           />
           <textarea
             name="message"
             value={formData.message}
-            onChange={handleChange}
+            onChange={updateContactFormFields}
             placeholder="Your Message"
             rows="5"
             required
