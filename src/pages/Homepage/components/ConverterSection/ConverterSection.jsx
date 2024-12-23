@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Select from "react-select";
-import Button from "../../../../components/common/Button/Button";
 import useCurrencyData from "../../../../utils/hooks/useCurrencyData";
 
-// Define the currency list including Albanian Lek
 const currencyList = [
   { value: "USD", label: "USD", flag: "https://flagcdn.com/us.svg" },
   { value: "EUR", label: "EUR", flag: "https://flagcdn.com/eu.svg" },
@@ -18,28 +15,17 @@ const currencyList = [
   { value: "ALL", label: "ALL", flag: "https://flagcdn.com/al.svg" },
 ];
 
-const formatOptionLabel = ({ label, flag }) => (
-  <div style={{ display: "flex", alignItems: "center" }}>
-    <img
-      src={flag}
-      alt={label}
-      style={{ width: "20px", marginRight: "10px" }}
-    />
-    {label}
-  </div>
-);
-
 const ConverterSection = () => {
   const { currencyData, loading, error } = useCurrencyData();
   const [amount, setAmount] = useState(1000);
-  const [baseCurrency, setBaseCurrency] = useState(currencyList[1]); // Default to EUR
-  const [targetCurrency, setTargetCurrency] = useState(currencyList[0]); // Default to USD
+  const [baseCurrency, setBaseCurrency] = useState(currencyList[1].value);
+  const [targetCurrency, setTargetCurrency] = useState(currencyList[0].value);
   const [convertedAmount, setConvertedAmount] = useState(null);
 
   const handleConvert = () => {
     if (currencyData && baseCurrency && targetCurrency) {
-      const baseRate = currencyData[baseCurrency.value];
-      const targetRate = currencyData[targetCurrency.value];
+      const baseRate = currencyData[baseCurrency];
+      const targetRate = currencyData[targetCurrency];
       if (baseRate && targetRate) {
         const conversionRate = targetRate / baseRate;
         setConvertedAmount((amount * conversionRate).toFixed(2));
@@ -65,26 +51,32 @@ const ConverterSection = () => {
               disabled={loading}
               placeholder="Amount"
             />
-            <Select
+            <select
               value={baseCurrency}
-              onChange={setBaseCurrency}
-              options={currencyList}
-              isDisabled={loading}
-              formatOptionLabel={formatOptionLabel}
-              styles={{ control: (base) => ({ ...base, minWidth: 100 }) }}
-            />
+              onChange={(e) => setBaseCurrency(e.target.value)}
+              disabled={loading}
+            >
+              {currencyList.map((currency) => (
+                <option key={currency.value} value={currency.value}>
+                  {currency.label}
+                </option>
+              ))}
+            </select>
           </div>
           <span>⇄</span>
           <div className="converter-input-right">
             <input type="text" value={convertedAmount || ""} readOnly />
-            <Select
+            <select
               value={targetCurrency}
-              onChange={setTargetCurrency}
-              options={currencyList}
-              isDisabled={loading}
-              formatOptionLabel={formatOptionLabel}
-              styles={{ control: (base) => ({ ...base, minWidth: 100 }) }}
-            />
+              onChange={(e) => setTargetCurrency(e.target.value)}
+              disabled={loading}
+            >
+              {currencyList.map((currency) => (
+                <option key={currency.value} value={currency.value}>
+                  {currency.label}
+                </option>
+              ))}
+            </select>
           </div>
         </div>
         <div className="converter-input-result">
@@ -92,20 +84,16 @@ const ConverterSection = () => {
             <p>
               {new Intl.NumberFormat("en-US", {
                 style: "currency",
-                currency: baseCurrency.value,
+                currency: baseCurrency,
               }).format(amount)}{" "}
-              {baseCurrency.label} ={" "}
+              {baseCurrency} ={" "}
               {new Intl.NumberFormat("en-US", {
                 style: "currency",
-                currency: targetCurrency.value,
+                currency: targetCurrency,
               }).format(convertedAmount)}{" "}
-              {targetCurrency.label}
+              {targetCurrency}
             </p>
-          )}{" "}
-          <br></br>
-          <Button variant="primary" onClick={handleConvert} disabled={loading}>
-            {loading ? "Converting..." : "Convert"}
-          </Button>
+          )}
         </div>
       </div>
       {error && <p className="error-message">{error}</p>}

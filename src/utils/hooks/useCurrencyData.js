@@ -1,15 +1,11 @@
-// src/utils/hooks/useCurrencyData.js
-
 import { useState, useEffect } from "react";
 import { useContext } from "react";
-import { CurrencyContext } from "../../context/CurrencyProvider"; // Import context
+import { CurrencyContext } from "../../context/CurrencyProvider";
 
 const useCurrencyData = (baseCurrency) => {
   const { currencyData, loading, error } = useContext(CurrencyContext);
 
-  useEffect(() => {
-    // If you wanted to refetch based on baseCurrency, you can put the logic here.
-  }, [baseCurrency]);
+  useEffect(() => {}, [baseCurrency]);
 
   return { currencyData, loading, error };
 };
