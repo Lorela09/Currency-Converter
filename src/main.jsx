@@ -1,7 +1,7 @@
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import AppRouter from "./router";
-import { CurrencyProvider } from "./context/CurrencyProvider";
+import { CurrencyProvider } from "./context/CurrencyContext/CurrencyProvider";
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
