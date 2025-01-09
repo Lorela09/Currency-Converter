@@ -5,12 +5,12 @@ import APISection from "./components/APISection/APISection";
 
 const HomePage = () => {
   return (
-    <>
+    <div className="homepage-container">
       <HeroSection />
       <ConverterSection />
       <HowToSection />
       <APISection />
-    </>
+    </div>
   );
 };
 
