@@ -9,7 +9,7 @@ export const CurrencyProvider = ({ children }) => {
 
   const fetchCurrencies = useCallback(async () => {
     try {
-      const apiKey = "77ad45bbaff3cbea0a8e9131";
+      const apiKey = import.meta.env.VITE_EXCHANGE_RATE_API_KEY;
       const response = await fetch(
         `https://v6.exchangerate-api.com/v6/${apiKey}/latest/USD`
       );
@@ -23,7 +23,6 @@ export const CurrencyProvider = ({ children }) => {
         Object.keys(data.conversion_rates).map((currency) => ({
           value: currency,
           label: currency,
-          flag: `https://flagcdn.com/${currency.toLowerCase()}.svg`,
         }))
       );
       setCurrencyData(data.conversion_rates);

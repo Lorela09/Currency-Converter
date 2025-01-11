@@ -45,13 +45,17 @@ const ConverterSection = () => {
             <input
               type="number"
               value={amount}
-              onChange={(e) => setAmount(e.target.value)}
+              onChange={(e) => setAmount(Number(e.target.value))}
               disabled={loading}
               placeholder="Amount"
+              onWheel={(event) => event.target.blur()}
             />
             <select
               value={baseCurrency}
-              onChange={(e) => setBaseCurrency(e.target.value)}
+              onChange={(e) => {
+                setBaseCurrency(e.target.value);
+                handleConvert();
+              }}
               disabled={loading}
             >
               {currencyOptions.map((currency) => (
@@ -61,12 +65,15 @@ const ConverterSection = () => {
               ))}
             </select>
           </div>
-          <span></span>
+          <span>→</span>
           <div className="converter-input-right">
             <input type="text" value={convertedAmount || ""} readOnly />
             <select
               value={targetCurrency}
-              onChange={(e) => setTargetCurrency(e.target.value)}
+              onChange={(e) => {
+                setTargetCurrency(e.target.value);
+                handleConvert();
+              }}
               disabled={loading}
             >
               {currencyOptions.map((currency) => (
@@ -77,7 +84,26 @@ const ConverterSection = () => {
             </select>
           </div>
         </div>
+        <div className="converter-input-result">
+          {convertedAmount && (
+            <p>
+              {new Intl.NumberFormat("en-US", {
+                style: "currency",
+                currency: baseCurrency,
+              }).format(amount)}{" "}
+              {baseCurrency} ={" "}
+              {new Intl.NumberFormat("en-US", {
+                style: "currency",
+                currency: targetCurrency,
+              }).format(convertedAmount)}{" "}
+              {targetCurrency}
+            </p>
+          )}
+          <br />
+        </div>
+        {error && <p className="error-message">{error}</p>}
       </div>
+      <div className="converter-border"></div>
     </section>
   );
 };

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "../../components/common/Button/Button";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -49,7 +50,7 @@ const Contact = () => {
             rows="5"
             required
           ></textarea>
-          <button type="submit">Send Message</button>
+          <Button type="submit">Send Message</Button>
         </form>
       </div>
     </div>

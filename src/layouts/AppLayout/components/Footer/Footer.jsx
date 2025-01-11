@@ -1,4 +1,3 @@
-import React from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import footerLogo from "../../../../assets/images/wise-logo-footer.png";
 import Button from "../../../../components/common/Button/Button";

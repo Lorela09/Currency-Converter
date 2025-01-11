@@ -18,18 +18,23 @@ A React-based web application to convert currencies using live exchange rates fr
 
 ## Project Structure
 
+├── README.md
+├── eslint.config.js
+├── index.html
+├── package-lock.json
+├── package.json
 ├── public
+│   └── favicon.svg
 ├── src
-│ ├── api
-│ ├── assets
-│ ├── components
-│ ├── context
-│ ├── layouts
-│ ├── router
-│ ├── screens
-│ ├── styles
-│ └── utils
-└── package.json
+│   ├── assets
+│   ├── components
+│   ├── context
+│   ├── layouts
+│   ├── main.jsx
+│   ├── pages
+│   ├── router
+│   └── styles
+└── vite.config.js
 
 ## Technologies Used
 
